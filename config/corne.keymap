@@ -63,9 +63,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
- &trans               &trans &mmv MOVE_VERT(-2500)                &trans  &mkp MCLK     &trans    &trans         &trans       &trans     &trans  &trans  &trans
- &trans  &mmv MOVE_HOR(2500)  &mmv MOVE_VERT(2500)  &mmv MOVE_HOR(-2500)  &mkp LCLK  &mkp RCLK  &kp LEFT       &kp DOWN       &kp UP  &kp RIGHT  &trans  &trans
- &trans               &trans                &trans                &trans     &trans     &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP    &kp END  &trans  &trans
+ &trans                &trans   &mmv MOVE_VERT(2500)                &trans  &mkp MCLK     &trans  &mwh SCROLL_HOR(-15)  &mwh SCROLL_VERT(-15) &mwh SCROLL_VERT(15) &mwh SCROLL_HOR(15)  &trans  &trans
+ &trans  &mmv MOVE_HOR(-2500)  &mmv MOVE_VERT(-2500)   &mmv MOVE_HOR(2500)  &mkp LCLK  &mkp RCLK              &kp LEFT              &kp DOWN               &kp UP           &kp RIGHT   &trans  &trans
+ &trans                &trans                 &trans                &trans     &trans     &trans              &kp HOME         &kp PAGE_DOWN          &kp PAGE_UP             &kp END   &trans  &trans
                          &trans  &trans  &trans    &trans         &trans       &trans
             >;
         };
