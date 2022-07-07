@@ -1,11 +1,13 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/krikun98/zmk/tree/mouse-pr
+      url-base: https://github.com/zmkfirmware
+    - name: gcgbarbosa
+      url-base: https://github.com/gcgbarbosa
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: gcgbarbosa
+      revision: mouse-ftc
       import: app/west.yml
   self:
     path: config
