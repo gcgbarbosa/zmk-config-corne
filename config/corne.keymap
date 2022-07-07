@@ -79,15 +79,7 @@
                                      &kp NUMBER_0  &trans  &trans      &trans          &trans            &trans
             >;
         };
-        
-        layer6 { //mouse build from git@github.com:krikun98/zmk.git branch mouse-pr
-                       bindings = <
-   &trans &none    &none    &none     &none         &none      &none                 &none            &none          &none             &none &none        
-   &none &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT    &none      &mmv MOVE_HOR(-2500)   &mmv MOVE_VERT(2500)   &mmv MOVE_VERT(-2500)   &mmv MOVE_HOR(2500)   &none &none
-   &none &none    &none    &none     &none         &none      &mwh SCROLL_HOR(-15) &mwh SCROLL_VERT(-15) &mwh SCROLL_VERT(15) &mwh SCROLL_HOR(15) &none &none      
-                  &none    &none     &none         &mkp LCLK &mkp RCLK   &mkp MCLK
-                       >;
-                };
-        
+       
+  
     };
 };
