@@ -49,8 +49,8 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
- &trans       &trans  &key_repeat   &caps_word  &caps_word  &trans  &key_repeat    &key_repeat  &key_repeat  &key_repeat  &trans  &trans
- &trans  &key_repeat  &key_repeat  &key_repeat  &caps_word  &trans     &kp LEFT       &kp DOWN       &kp UP    &kp RIGHT  &trans  &trans
+ &trans       &trans  &mmv MOVE_UP   &caps_word  &caps_word  &trans  &key_repeat    &key_repeat  &key_repeat  &key_repeat  &trans  &trans
+ &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &caps_word  &trans     &kp LEFT       &kp DOWN       &kp UP    &kp RIGHT  &trans  &trans
  &trans       &trans       &trans       &trans      &trans  &trans     &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP      &kp END  &trans  &trans
                                         &trans      &trans  &trans       &trans         &trans       &trans
             >;
