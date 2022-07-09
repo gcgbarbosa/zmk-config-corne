@@ -75,6 +75,15 @@
                                      &kp NUMBER_0  &trans  &trans      &trans          &trans            &trans
             >;
         };
+        
+        FPS {
+            bindings = <
+        &kp TAB   &kp Q   &kp W         &kp E         &kp R      &kp T  &trans          &trans            &trans        &trans        &trans  &tog 4
+      &kp LCTRL   &kp A   &kp S         &kp D         &kp F      &kp G  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &trans
+ &kp LEFT_SHIFT   &kp Z   &kp X         &kp C         &kp V      &kp B  &trans          &trans            &trans        &trans        &trans  &trans
+                                 &kp NUMBER_1  &kp NUMBER_2  &kp SPACE  &trans          &trans            &trans
+            >;
+        };
        
   
     };
