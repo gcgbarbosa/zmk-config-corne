@@ -13,11 +13,11 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 &mmv {    
-     time-to-max-speed-ms = <500>;
+     time-to-max-speed-ms = <700>;
      acceleration-exponent=<1>;
 };
 &mwh {    
-    time-to-max-speed-ms = <2000>;
+    time-to-max-speed-ms = <3000>;
     acceleration-exponent=<0>;
 }; 
 
@@ -28,7 +28,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings =
