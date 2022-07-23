@@ -13,7 +13,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 &mmv {    
-     time-to-max-speed-ms = <750>;
+     time-to-max-speed-ms = <500>;
      acceleration-exponent=<1>;
 };
 &mwh {    
@@ -51,7 +51,7 @@
 
         NAV {
             bindings = <
- &trans                &trans   &mmv MOVE_VERT(-2500)               &trans  &mkp MCLK     &trans  &mwh SCROLL_HOR(-30)  &mwh SCROLL_VERT(-30) &mwh SCROLL_VERT(30) &mwh SCROLL_HOR(30)  &trans  &trans
+ &trans                &trans   &mmv MOVE_VERT(-2500)               &trans  &mkp MCLK     &trans  &mwh SCROLL_HOR(-25)  &mwh SCROLL_VERT(-25) &mwh SCROLL_VERT(25) &mwh SCROLL_HOR(25)  &trans  &trans
  &trans  &mmv MOVE_HOR(-2500)    &mmv MOVE_VERT(2500)  &mmv MOVE_HOR(2500)  &mkp LCLK  &mkp RCLK              &kp LEFT               &kp DOWN               &kp UP           &kp RIGHT  &trans  &trans
  &trans                &trans                 &trans                &trans     &trans     &trans              &kp HOME          &kp PAGE_DOWN          &kp PAGE_UP             &kp END  &trans  &trans
                                                                     &trans     &trans     &trans                &trans                 &trans               &trans
