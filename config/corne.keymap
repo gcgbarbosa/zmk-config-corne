@@ -4,19 +4,23 @@
  * SPDX-License-Identifier: MIT
  */
 
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/ext_power.h>
 
-&mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <1>;
+&mmv {    
+     time-to-max-speed-ms = <500>;
+     acceleration-exponent=<1>;
 };
-
-&mwh {
+&mwh {    
     time-to-max-speed-ms = <4000>;
-    acceleration-exponent = <0>;
-};
+    acceleration-exponent=<0>;
+}; 
+
 
 / {
     behaviors {
@@ -47,10 +51,10 @@
 
         NAV {
             bindings = <
- &trans                &trans  &mmv MOVE_VERT(-2500)               &trans  &mkp MCLK     &trans  &mwh SCROLL_HOR(-25)  &mwh SCROLL_VERT(-25)  &mwh SCROLL_VERT(25)  &mwh SCROLL_HOR(25)  &trans  &trans
- &trans  &mmv MOVE_HOR(-2500)   &mmv MOVE_VERT(2500)  &mmv MOVE_HOR(2500)  &mkp LCLK  &mkp RCLK              &kp LEFT               &kp DOWN                &kp UP            &kp RIGHT  &trans  &trans
- &trans                &trans                 &trans               &trans     &trans     &trans              &kp HOME          &kp PAGE_DOWN           &kp PAGE_UP              &kp END  &trans  &trans
-                                                                   &trans     &trans     &trans                &trans                 &trans                &trans
+ &trans                &trans   &mmv MOVE_VERT(-2500)               &trans  &mkp MCLK     &trans  &mwh SCROLL_HOR(-25)  &mwh SCROLL_VERT(-25) &mwh SCROLL_VERT(25) &mwh SCROLL_HOR(25)  &trans  &trans
+ &trans  &mmv MOVE_HOR(-2500)    &mmv MOVE_VERT(2500)  &mmv MOVE_HOR(2500)  &mkp LCLK  &mkp RCLK              &kp LEFT               &kp DOWN               &kp UP           &kp RIGHT  &trans  &trans
+ &trans                &trans                 &trans                &trans     &trans     &trans              &kp HOME          &kp PAGE_DOWN          &kp PAGE_UP             &kp END  &trans  &trans
+                                                                    &trans     &trans     &trans                &trans                 &trans               &trans
             >;
         };
 
@@ -65,38 +69,30 @@
 
         NUM {
             bindings = <
- &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans  &bt BT_CLR    &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+ &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans  &bt BT_CLR    &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &tog 4
  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans      &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &trans
- &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &tog 4           &none            &trans        &trans        &trans  &trans
+ &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &trans           &none            &trans        &trans        &trans  &trans
                                      &kp NUMBER_0  &trans  &trans      &trans          &trans            &trans
             >;
         };
-
+        
         FPS_1 {
             bindings = <
-        &kp TAB   &kp Q   &kp W         &kp E         &kp R   &kp T  &trans          &trans            &trans        &trans        &trans   &trans
-      &kp LCTRL   &kp A   &kp S         &kp D         &kp F   &kp G  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &kp ESC
- &kp LEFT_SHIFT   &kp Z   &kp X         &kp C         &kp V   &kp B  &trans          &trans            &trans        &trans        &trans   &trans
-                                 &kp NUMBER_1  &kp NUMBER_2   &mo 5  &trans          &trans            &trans
+        &kp TAB   &kp Q   &kp W         &kp E         &kp R      &kp T  &trans          &trans            &trans        &trans        &trans   &trans
+      &kp LCTRL   &kp A   &kp S         &kp D         &kp F      &kp G  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &kp ESC
+ &kp LEFT_SHIFT   &kp Z   &kp X         &kp C         &kp V      &kp B  &trans          &trans            &trans        &trans        &trans   &trans
+                                 &kp NUMBER_1  &kp NUMBER_2      &mo 5  &trans          &trans            &trans
             >;
         };
-
+       
         FPS_2 {
             bindings = <
- &trans   &kp U      &kp I   &kp O          &kp P  &trans  &trans          &trans            &trans        &trans        &trans   &trans
- &trans   &kp J      &kp K   &kp L  &kp SEMICOLON  &trans  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &kp ESC
- &trans   &kp M  &kp COMMA   &kp C          &kp V  &trans  &trans          &trans            &trans        &trans        &trans   &trans
-                            &trans         &trans  &trans  &trans          &trans            &trans
+ &trans   &kp U   &kp I         &kp O         &kp P          &trans  &trans          &trans            &trans        &trans        &trans   &trans
+ &trans   &kp J   &kp K         &kp L         &kp SEMICOLON  &trans  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &kp ESC
+ &trans   &kp M   &kp COMMA     &kp C         &kp V          &trans  &trans          &trans            &trans        &trans        &trans   &trans
+                                &trans        &trans         &trans  &trans          &trans            &trans
             >;
         };
-
-        TIBIA_1 {
-            bindings = <
-      &kp TAB   &kp Q   &kp W      &kp E   &kp R          &kp T   &kp Y   &kp U      &kp I    &kp O          &kp P  &kp ENTER
- &kp LEFT_ALT   &kp A   &kp S      &kp D   &kp F          &kp G   &kp H   &kp J      &kp K    &kp L  &kp SEMICOLON    &kp SQT
-   &kp LSHIFT   &kp Z   &kp X      &kp C   &kp V          &kp B   &kp N   &kp M  &kp COMMA  &kp DOT      &kp SLASH     &trans
-                               &kp LCTRL  &trans  &kp BACKSPACE  &trans  &trans     &trans
-            >;
-        };
+       
     };
 };
