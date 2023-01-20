@@ -4,19 +4,23 @@
  * SPDX-License-Identifier: MIT
  */
 
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/ext_power.h>
 
-&mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <1>;
+&mmv {    
+     time-to-max-speed-ms = <500>;
+     acceleration-exponent=<1>;
 };
-
-&mwh {
+&mwh {    
     time-to-max-speed-ms = <4000>;
-    acceleration-exponent = <0>;
-};
+    acceleration-exponent=<0>;
+}; 
+
 
 / {
     behaviors {
@@ -65,29 +69,21 @@
 
         NUM {
             bindings = <
- &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9        &trans  &trans  &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
- &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans        &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN      &trans
- &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3        &trans  &trans        &trans          &trans            &trans        &trans        &trans      &trans
-                                           &trans        &trans  &trans        &trans          &trans            &trans
+ &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &kp CAPS  &bt BT_CLR    &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+ &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans    &trans      &tog 4  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &trans
+ &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &trans      &trans          &trans            &trans        &trans        &trans  &trans
+                                     &kp NUMBER_0  &trans    &trans      &trans          &trans            &trans
             >;
         };
-
+        
         NO_ROW_MOD {
             bindings = <
-   &kp TAB   &kp Q   &kp W       &kp E   &kp R          &kp T      &kp Y         &kp U      &kp I    &kp O          &kp P  &kp ENTER
-   &kp ESC   &kp A   &kp S       &kp D   &kp F          &kp G      &kp H         &kp J      &kp K    &kp L  &kp SEMICOLON    &kp SQT
- &kp LCTRL   &kp Z   &kp X       &kp C   &kp V          &kp B      &kp N         &kp M  &kp COMMA  &kp DOT      &kp SLASH    &kp ESC
-                            &kp LSHIFT   &mo 5  &kp BACKSPACE  &kp SPACE  &kp LEFT_WIN     &tog 0
+      &kp TAB   &kp Q   &kp W      &kp E      &kp R          &kp T        &kp Y   &kp U         &kp I    &kp O          &kp P       &kp ENTER
+      &kp ESC   &kp A   &kp S      &kp D      &kp F          &kp G        &kp H   &kp J         &kp K    &kp L  &kp SEMICOLON         &kp SQT
+    &kp LCTRL   &kp Z   &kp X      &kp C      &kp V          &kp B        &kp N   &kp M     &kp COMMA  &kp DOT      &kp SLASH    &kp LEFT_ALT
+                               &kp LSHIFT     &mo 1  &kp BACKSPACE   &kp  SPACE   &mo 2        &tog 4
             >;
         };
-
-        NUMPAD {
-            bindings = <
- &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                    &trans           &trans  &trans  &trans  &trans  &trans
-            >;
-        };
+       
     };
 };
