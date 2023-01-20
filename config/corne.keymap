@@ -69,10 +69,10 @@
 
         NUM {
             bindings = <
- &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &kp CAPS  &bt BT_CLR    &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
- &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans    &trans      &tog 4  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &trans
- &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &trans      &trans          &trans            &trans        &trans        &trans  &trans
-                                     &kp NUMBER_0  &trans    &trans      &trans          &trans            &trans
+ &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans          &kp CAPS  &bt BT_CLR    &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+ &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0    &trans      &tog 4  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &trans
+ &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans          &trans      &trans          &trans            &trans        &trans        &trans  &trans
+                                     &trans        &trans          &trans      &trans          &trans            &trans
             >;
         };
         
@@ -82,6 +82,15 @@
       &kp ESC   &kp A   &kp S      &kp D      &kp F          &kp G        &kp H   &kp J         &kp K    &kp L  &kp SEMICOLON         &kp SQT
     &kp LCTRL   &kp Z   &kp X      &kp C      &kp V          &kp B        &kp N   &kp M     &kp COMMA  &kp DOT      &kp SLASH    &kp LEFT_ALT
                                &kp LSHIFT     &mo 1  &kp BACKSPACE   &kp  SPACE   &mo 2        &tog 4
+            >;
+        };
+        
+        NUMPAD {
+            bindings = <
+ &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                    &trans           &trans  &trans  &trans  &trans  &trans
             >;
         };
        
