@@ -60,7 +60,7 @@
 
         SYMB {
             bindings = <
- &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT  &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR   &kp BSPC
+ &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT  &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &trans
  &kp F1    &kp F2  &kp F3    &kp F4    &kp F5      &kp F6  &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
  &kp F7    &kp F8  &kp F9   &kp F10   &kp F11     &kp F12  &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
                              &trans    &trans  &kp DELETE     &trans     &trans           &trans
@@ -79,7 +79,7 @@
         NO_ROW_MOD {
             bindings = <
    &kp TAB   &kp Q   &kp W       &kp E   &kp R          &kp T      &kp Y         &kp U      &kp I    &kp O          &kp P  &kp ENTER
-   &kp ESC   &kp A   &kp S       &kp D   &kp F          &kp G      &kp H         &kp J      &kp K    &kp L  &kp SEMICOLON    &kp SQT
+  &kp CAPS   &kp A   &kp S       &kp D   &kp F          &kp G      &kp H         &kp J      &kp K    &kp L  &kp SEMICOLON    &kp SQT
  &kp LCTRL   &kp Z   &kp X       &kp C   &kp V          &kp B      &kp N         &kp M  &kp COMMA  &kp DOT      &kp SLASH    &kp ESC
                             &kp LSHIFT   &mo 5  &kp BACKSPACE  &kp SPACE  &kp LEFT_WIN     &tog 0
             >;
